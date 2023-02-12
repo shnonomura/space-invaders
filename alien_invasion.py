@@ -1,5 +1,5 @@
+# -*- coding: latin-1 -*-
 import sys
-
 import pygame
 
 def run_game():
@@ -7,6 +7,9 @@ def run_game():
     pygame.init()
     screen = pygame.display.set_mode((1100,800))
     pygame.display.set_caption("Space Invaders")
+    
+    # define a cor de fundo
+    bg_color = (230, 250, 230)
 
 
     #inicia o laco principal do jogo
@@ -17,6 +20,10 @@ def run_game():
             if event.type == pygame.QUIT:
                 sys.exit()
 
+        
+        # redesenha a tela a cada passagem pelo laço
+        screen.fill(bg_color)
+        
         # deixa a tela mais recente visivel
         pygame.display.flip()
 
